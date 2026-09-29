@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema Solar Interativo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Fundo de estrelas -->
+    <div class="stars"></div>
+    <div class="stars stars2"></div>
+    <div class="stars stars3"></div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">🌌</div>
+
+        <div>
+            <h1>SISTEMA SOLAR</h1>
+            <p>Explore os planetas do nosso universo</p>
+        </div>
+
+        <button id="pauseBtn" onclick="alternarAnimacao()">
+            ⏸ Pausar
+        </button>
+    </header>
+
+    <!-- Sistema Solar -->
+    <main>
+
+        <div class="solar-system">
+
+            <!-- Sol -->
+            <div class="sun">
+                <div class="sun-core"></div>
+            </div>
+
+            <!-- Órbita de Mercúrio -->
+            <div class="orbit orbit-mercury">
+                <button class="planet mercury"
+                    onclick="mostrarPlaneta('mercurio')"
+                    title="Mercúrio">
+                </button>
+            </div>
+
+            <!-- Órbita de Vênus -->
+            <div class="orbit orbit-venus">
+                <button class="planet venus"
+                    onclick="mostrarPlaneta('venus')"
+                    title="Vênus">
+                </button>
+            </div>
+
+            <!-- Órbita da Terra -->
+            <div class="orbit orbit-earth">
+                <button class="planet earth"
+                    onclick="mostrarPlaneta('terra')"
+                    title="Terra">
+                </button>
+            </div>
+
+            <!-- Órbita de Marte -->
+            <div class="orbit orbit-mars">
+                <button class="planet mars"
+                    onclick="mostrarPlaneta('marte')"
+                    title="Marte">
+                </button>
+            </div>
+
+            <!-- Órbita de Júpiter -->
+            <div class="orbit orbit-jupiter">
+                <button class="planet jupiter"
+                    onclick="mostrarPlaneta('jupiter')"
+                    title="Júpiter">
+                </button>
+            </div>
+
+            <!-- Órbita de Saturno -->
+            <div class="orbit orbit-saturn">
+                <button class="planet saturn"
+                    onclick="mostrarPlaneta('saturno')"
+                    title="Saturno">
+                </button>
+            </div>
+
+            <!-- Órbita de Urano -->
+            <div class="orbit orbit-uranus">
+                <button class="planet uranus"
+                    onclick="mostrarPlaneta('urano')"
+                    title="Urano">
+                </button>
+            </div>
+
+            <!-- Órbita de Netuno -->
+            <div class="orbit orbit-neptune">
+                <button class="planet neptune"
+                    onclick="mostrarPlaneta('netuno')"
+                    title="Netuno">
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mensagem inicial -->
+        <div class="instruction">
+            <span>🖱️</span>
+            Clique em um planeta para descobrir mais
+        </div>
+
+    </main>
+
+    <!-- Painel de informações -->
+    <div id="infoPanel" class="info-panel">
+
+        <button class="close" onclick="fecharPainel()">×</button>
+
+        <div class="planet-image" id="planetImage"></div>
+
+        <div class="info-content">
+
+            <span class="category">PLANETA</span>
+
+            <h2 id="planetName">Terra</h2>
+
+            <p id="planetDescription">
+                Descrição do planeta.
+            </p>
+
+            <div class="data-grid">
+
+                <div class="data">
+                    <span>📏</span>
+                    <strong>Diâmetro</strong>
+                    <p id="diameter"></p>
+                </div>
+
+                <div class="data">
+                    <span>☀️</span>
+                    <strong>Distância do Sol</strong>
+                    <p id="distance"></p>
+                </div>
+
+                <div class="data">
+                    <span>🌡️</span>
+                    <strong>Temperatura</strong>
+                    <p id="temperature"></p>
+                </div>
+
+                <div class="data">
+                    <span>🌙</span>
+                    <strong>Luas</strong>
+                    <p id="moons"></p>
+                </div>
+
+                <div class="data">
+                    <span>🔄</span>
+                    <strong>Duração do ano</strong>
+                    <p id="year"></p>
+                </div>
+
+                <div class="data">
+                    <span>⏱️</span>
+                    <strong>Duração do dia</strong>
+                    <p id="day"></p>
+                </div>
+
+            </div>
+
+            <div class="curiosity">
+                <strong>✨ Você sabia?</strong>
+
+                <p id="curiosity"></p>
+            </div>
+
+            <button class="voice-button" onclick="lerInformacoes()">
+                🔊 Ouvir informações
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="overlay" onclick="fecharPainel()"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
