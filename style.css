@@ -1296,3 +1296,14 @@ main {
     }
 
 }
+
+/* Saturno quando aparece no painel */
+.planet-image .big-planet.saturn {
+    width: 150px;
+    height: 150px;
+}
+
+.planet-image .big-planet.saturn::before {
+    width: 245px;
+    height: 58px;
+}
