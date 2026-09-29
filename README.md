@@ -1,6 +1,7 @@
 Sistema Solar Interativo
 
 O que criamos
+
 Criamos uma aplicação web interativa sobre o Sistema Solar, onde o usuário pode visualizar os planetas em movimento e clicar em cada um para consultar suas principais informações e curiosidades.
 
 Ideia
